@@ -1,0 +1,33 @@
+while True:
+    try:
+        # Input marks obtained by student
+        marks = int(input("Enter the marks obtained by the student: "))
+
+        # Check if marks are valid
+        if marks < 0 or marks > 100:
+            print("Invalid marks! Please enter marks between 0 and 100.")
+            continue
+
+        # Determine grade
+        if marks >= 90:
+            grade = "A+"
+        elif marks >= 80:
+            grade = "A"
+        elif marks >= 70:
+            grade = "B"
+        elif marks >= 60:
+            grade = "C"
+        elif marks >= 50:
+            grade = "D"
+        else:
+            grade = "Fail"
+            
+        print(f"The student's grade is: {grade}")
+        
+    except ValueError:
+        print("Invalid input! Please enter a number.")
+
+    # Ask user if they want to calculate the grade for another student
+    user_input = input("Do you want to calculate the grade for another student? (yes/no): ")
+    if user_input.lower() != "yes":
+        break
